@@ -16,6 +16,7 @@ RUN mamba install -y \
     bokeh \
     dask \
     dask-labextension \
+    dask-ml \
     distributed \
     matplotlib \
     pandas \
@@ -26,9 +27,6 @@ RUN mamba install -y \
     zarr \
     pooch \
     xarray
-
-# Clone the Dask tutorial repository (optional if you provide files separately)
-RUN git clone https://github.com/yves-baechtiger/cic-le4-hands-on.git ./dask-tutorial
 
 # Register the Conda environment as a Jupyter kernel
 RUN python -m ipykernel install --user --name dask-tutorial --display-name "Python (Dask Tutorial)"

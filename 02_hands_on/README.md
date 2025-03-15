@@ -16,7 +16,12 @@ docker build -t <your_image_name> .
 
 After the docker image has been built run:
 ```bash
-docker run -it -p 8888:8888 -p 8787:8787 <your_image_name>
+docker run -it \
+  -p 8888:8888 \
+  -p 8787:8787 \
+  -v <your/local/path/to>/cic-le4-hands-on:/home/jovyan/cic-le4-hands-on \
+  my-dask-image
+
 ```
 
 Jupyter lab will start and provide and URL where you will find your Lab. 
